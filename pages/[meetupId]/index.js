@@ -41,7 +41,7 @@ export async function getStaticPaths() {
   // console.log(paths);
 
   return {
-    fallback: false,
+    fallback: 'blocking',
     paths: paths,
   };
 }
@@ -60,7 +60,7 @@ export async function getStaticProps(context) {
     _id: new ObjectId(meetupId),
   });
 
-  console.log(selectedMeetup);
+  // console.log(selectedMeetup);
 
   client.close();
 
